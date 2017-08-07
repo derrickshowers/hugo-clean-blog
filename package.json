@@ -1,0 +1,10 @@
+{
+  "name": "hugo-clean-blog",
+  "description": "Hugo blog theme",
+  "scripts": {
+    "build": "sass sass/base.scss:./static/css/clean-blog.min.css --style compressed",
+    "dev": "sass  --watch sass/base.scss:./static/css/clean-blog.min.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
