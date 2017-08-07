@@ -19,8 +19,14 @@
     <!-- Bootstrap Core CSS -->
     <link href="{{ .Site.BaseURL }}/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
+    <!-- Theme CSS -->
     <link href="{{ .Site.BaseURL }}/css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    {{ $baseURL := .Site.BaseURL }}
+    {{ range .Site.Params.customCSS }}
+      <script src="{{ $baseURL }}/{{ . }}"></script>
+    {{ end }}
 
     <!-- Custom Fonts -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">

@@ -38,8 +38,11 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="{{ .Site.BaseURL }}/js/bootstrap.min.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="{{ .Site.BaseURL }}/js/clean-blog.js"></script>
+    <!-- Custom JavaScript -->
+    {{ $baseURL := .Site.BaseURL }}
+    {{ range .Site.Params.customJS }}
+      <script src="{{ $baseURL }}/{{ . }}"></script>
+    {{ end }}
 
     {{ template "_internal/google_analytics.html" . }}
 
